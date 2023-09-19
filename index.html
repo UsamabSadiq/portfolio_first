@@ -30,6 +30,14 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function () {
+                // https://dashboard.emailjs.com/admin/account
+                emailjs.init('s5tjxA6jpTwBXfK7G');
+            })();
+        </script>
 </head>
 
 <body>
@@ -400,13 +408,7 @@
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control border-0 bg-secondary" id="subject"
-                                        name="subject" required placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
+
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea class="form-control border-0 bg-secondary" name="message" required
@@ -416,7 +418,8 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                <button onclick="sendMail()" class="btn btn-primary w-100 py-3" type="submit">Send
+                                    Message</button>
                             </div>
                         </div>
                     </form>

@@ -93,3 +93,17 @@
     });
 })(jQuery);
 
+
+// Email Js Configuration
+
+function sendMail() {
+    var params = {
+        from_name: document.getElementById("name").value,
+        email_id: document.getElementById("email").value,
+        message: document.getElementById("message")
+
+    }
+    emailjs.send("service_mzh17ed", "template_qxj1sqw", params).then(function (res) {
+        alert("Mail Delivered Successfully!!")
+    })
+}
